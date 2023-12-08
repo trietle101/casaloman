@@ -1,0 +1,13 @@
+.account-container {
+  margin-top: 30px;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  .account {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+  }
+}

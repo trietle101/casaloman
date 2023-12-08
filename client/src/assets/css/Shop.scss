@@ -1,0 +1,24 @@
+.shop {
+  width: 100%;
+  padding-top: 10px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  .shop-container {
+    height: 100%;
+    width: 75%;
+    .shop-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        font-size: 21px;
+      }
+      select {
+        padding: 7px;
+        background-color: rgb(247, 247, 247);
+        border: 1px solid rgb(204, 204, 204);
+      }
+    }
+  }
+}

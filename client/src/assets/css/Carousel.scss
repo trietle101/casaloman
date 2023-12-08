@@ -1,0 +1,22 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.carousel {
+  margin-top: 35px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .carousel-container {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+    .image-gallery-icon {
+      svg {
+        height: 40px;
+      }
+    }
+    .hide{
+      opacity: 0;
+    }
+  }
+}

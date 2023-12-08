@@ -1,0 +1,63 @@
+@mixin centerflex($jc) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}
+
+a {
+  all: unset;
+}
+.nav-container {
+  width: 100%;
+  height: 82.98px;
+  .ribbon {
+    height: 30.98px;
+    background-color: black;
+    @include centerflex(center);
+    span {
+      font-size: 9.84px;
+      color: white;
+    }
+  }
+  .nav {
+    position: sticky;
+    top: 0px;
+    height: 52px;
+    background-color: white;
+    padding: 0 15px;
+    z-index: 100;
+    @include centerflex(space-between);
+    img {
+      height: 16.78px;
+    }
+    &--left {
+      margin-right: 70px;
+    }
+    &--right {
+      a {
+        padding: 0 10px;
+      }
+      .cart {
+        span {
+          font-size: 11px;
+          position: absolute;
+          padding: 1px 4px;
+          right: 16px;
+          top: 9px;
+          color: white;
+          background-color: black;
+          border-radius: 50%;
+          z-index: 1000;
+        }
+      }
+    }
+  }
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+}

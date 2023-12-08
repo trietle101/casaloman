@@ -1,0 +1,54 @@
+.banner {
+  background-image: url("https://casaloman.com/wp-content/uploads/2023/04/9-1-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 880px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-height: 49px;
+    }
+    .banner-button {
+      margin-top: 20px;
+      padding: 0;
+      a {
+        padding: 5px 23px 6px 23px;
+        border: 2.5px solid rgba(255, 255, 255, 0.839);
+        border-radius: 7px;
+        margin: 0 10px;
+        color: rgba(255, 255, 255, 0.839);
+        font-size: 11.2px;
+        font-weight: 700;
+        transition: all 0.2s linear 0s;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.839);
+          color: rgba(0, 0, 0, 0.643);
+        }
+      }
+      // .btn-effect {
+      //   // transition: all 0.2s linear 0s;
+      //   &:hover {
+      //     padding: 0px 23px 5px 6px;
+      //     background-color: rgba(255, 255, 255, 0.839);
+      //     transition: padding 0.2s linear 0s;
+      //     &:after {
+      //       content: "\003E";
+      //       color: rgba(255, 255, 255, 0.839);
+      //       margin-left: 10px;
+      //       margin-right: 0;
+      //       font-weight: 500;
+      //       font-size: 10px;
+      //       // transition: all 0.2s linear 0s;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

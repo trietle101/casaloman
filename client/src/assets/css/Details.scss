@@ -1,0 +1,195 @@
+.details {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &-product {
+    width: 90%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 40% 30%;
+    grid-column-gap: 60px;
+    align-items: center;
+    overflow: scroll;
+    .product {
+      overflow-y: auto;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &--images {
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      img {
+        max-height: 95vh;
+        margin-top: 20px;
+      }
+    }
+
+    .details-product--info {
+      .info__name {
+        margin-bottom: 65px;
+        .name-cate {
+          a {
+            font-size: 10px;
+          }
+        }
+        .name-name {
+          h3 {
+            font-size: 15px;
+          }
+        }
+      }
+      .info__about {
+        b {
+          font-size: 10px;
+          border-top: 3px solid black;
+          padding-top: 7px;
+        }
+        ul {
+          padding-left: 20px;
+          font-size: 13px;
+          line-height: 30px;
+        }
+      }
+    }
+    .details-product--price {
+      .price__price {
+        margin-bottom: 30px;
+        b {
+          font-size: 15px;
+        }
+      }
+      .price__size {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted rgb(219, 219, 219);
+        margin-bottom: 20px;
+        p {
+          font-size: 9px;
+          margin-right: 5px;
+          font-weight: 750;
+        }
+        .size-list {
+          display: flex;
+          div {
+            border: 1px solid rgb(219, 219, 219);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 31px;
+            width: 33px;
+            border-radius: 5px;
+            margin-right: 8px;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .price__cart {
+        display: flex;
+        .cart-quantity {
+          border: 1px solid rgb(219, 219, 219);
+          input {
+            max-width: 2.5em;
+            width: 2.5em;
+            height: 24px;
+            text-align: center;
+            border-radius: 0 !important;
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            appearance: textfield;
+            border: none;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          button {
+            height: 30px;
+            width: 20px;
+            border-radius: 0px;
+            background: none;
+            color: inherit;
+            padding: 0;
+            outline: none;
+            border: none;
+            background-color: rgb(242, 242, 242);
+          }
+          .plus {
+            border-left: 1px solid rgb(219, 219, 219);
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+          }
+          .minus {
+            border-right: 1px solid rgb(219, 219, 219);
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+          }
+        }
+        .cart-add {
+          margin-left: 10px;
+          background-color: black;
+          color: white;
+          border: none;
+          font-size: 10px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .relevant {
+    width: fit-content;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .products-card {
+      width: 100%;
+      margin-right: 200px;
+      img {
+        width: 100%;
+      }
+      p,
+      b {
+        margin: 0;
+        font-size: 12px;
+      }
+      // .images {
+      //   position: relative;
+      //   .img1 {
+      //     position: absolute;
+      //     opacity: 1;
+      //     transition: opacity 0.4s ease-out 0s;
+      //   }
+      // }
+    }
+    .carousel-root {
+      max-height: 400px;
+    }
+    .carousel-slider {
+      height: 100%;
+    }
+    .slide {
+      margin-right: 20px;
+    }
+    .control-arrow {
+      max-height: 390px;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.611);
+      }
+    }
+    .carousel .control-next.control-arrow:before {
+      border-left: 8px solid #000000;
+    }
+    .carousel .control-prev.control-arrow:before {
+      border-right: 8px solid #000000;
+    }
+  }
+}

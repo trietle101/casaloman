@@ -1,0 +1,34 @@
+.products {
+  width: 100%;
+  .products-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 27px;
+    .products-card {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+      p,
+      b {
+        margin: 0;
+        font-size: 12px;
+      }
+      .images {
+        position: relative;
+        .img1 {
+          position: absolute;
+          opacity: 1;
+          transition: opacity 0.4s ease-out 0s;
+        }
+      }
+      &:hover {
+        .img1 {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
