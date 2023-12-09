@@ -7,7 +7,7 @@ const Categories = () => {
     <div className="categories">
       <div className="container">
         <div className="item">
-          <Link to={"/products/1"}>
+          <Link to={"/products/3"}>
             <img
               src="https://casaloman.com/wp-content/uploads/2023/01/12-1.jpg"
               alt="categories"
@@ -15,7 +15,7 @@ const Categories = () => {
           </Link>
         </div>
         <div className="item">
-          <Link to={"/products/2"}>
+          <Link to={"/products/1"}>
             <img
               src="https://casaloman.com/wp-content/uploads/2023/07/17.jpg"
               alt="categories"
@@ -23,7 +23,7 @@ const Categories = () => {
           </Link>
         </div>
         <div className="item">
-          <Link to={"/products/3"}>
+          <Link to={"/products/2"}>
             <img
               src="https://casaloman.com/wp-content/uploads/2023/01/16.jpg"
               alt="categories"
