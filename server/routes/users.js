@@ -4,7 +4,16 @@ var usersModel = require("../models/users/UsersModel");
 var app = express();
 const jwt = require("jsonwebtoken");
 const fs = require("fs");
-const PRIVATE_KEY = fs.readFileSync("private-key.txt");
+const path = require("path");
+
+const privateKeyPath = path.join(__dirname, "..", "private-key.txt");
+const PRIVATE_KEY = fs.readFile(privateKeyPath, (data, err) => {
+  if (err) {
+    console.error("Error reading private key:", err);
+    return;
+  }
+  data.toString();
+});
 
 //Get all users
 router.get("/", async function (req, res, next) {
