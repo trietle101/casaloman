@@ -7,7 +7,7 @@ import "../assets/css/Details.scss";
 
 const Details = () => {
   let { id_prod } = useParams();
-  const url = "http://localhost:4000";
+  const url = "https://casaloman-api.vercel.app";
   const [products, setProducts] = useState({});
   const [relproducts, setRelProducts] = useState({});
   const [categories, setCategories] = useState([]);

@@ -6,7 +6,7 @@ import "../assets/css/ProductUpdate.scss";
 const CategoryUpdate = () => {
   const mySelect = useRef();
   let { id_update } = useParams();
-  const url = "http://localhost:4000";
+  const url = "https://casaloman-api.vercel.app";
   const [product, setProduct] = useState([]);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");

@@ -8,7 +8,7 @@ import { loginSuccess } from "../features/auth/authSlice";
 import { useFormik } from "formik";
 import { LoginSchema } from "../features/validations/UserSchema";
 
-const url = "http://localhost:4000";
+const url = "https://casaloman-api.vercel.app";
 
 const ChangePassword = () => {
   const dispatch = useDispatch();

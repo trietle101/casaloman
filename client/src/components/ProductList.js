@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../assets/css/ProductList.scss";
 
 const ProductList = () => {
-  const url = "http://localhost:4000";
+  const url = "https://casaloman-api.vercel.app";
   const [productList, setProductList] = useState([]);
   const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");

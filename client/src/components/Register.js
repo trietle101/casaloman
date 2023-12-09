@@ -3,7 +3,7 @@ import "../assets/css/Register.scss";
 import { useFormik } from "formik";
 import { UserSchema } from "../features/validations/UserSchema";
 
-const url = "http://localhost:4000";
+const url = "https://casaloman-api.vercel.app";
 
 const onSubmit = async (values, actions) => {
   console.log(values);
