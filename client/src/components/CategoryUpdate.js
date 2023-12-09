@@ -1,16 +1,12 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState, useEffect} from "react";
+import { useParams} from "react-router-dom";
 import "../assets/css/ProductUpdate.scss";
 
 const CategoryUpdate = () => {
-  const mySelect = useRef();
   let { id_update } = useParams();
   const url = "https://casaloman-api.vercel.app";
-  const [product, setProduct] = useState([]);
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [cate, setCate] = useState("");
 
   useEffect(() => {
     fetch(`${url}/categories/cate/${id_update}`)
@@ -26,8 +22,6 @@ const CategoryUpdate = () => {
   function handleSubmit() {
     const updatedData = {
       name: name,
-      price: price,
-      id_cate: cate
     };
     fetch(`${url}/categories/update/${id_update}`, {
       method: "PUT",

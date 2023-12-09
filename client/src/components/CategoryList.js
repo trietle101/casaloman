@@ -6,12 +6,8 @@ import "../assets/css/ProductList.scss";
 const CategoryList = () => {
   const url = "https://casaloman-api.vercel.app";
   const [categoryList, setCategoryList] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [cate, setCate] = useState("");
-  const [date, setDate] = useState("");
-  const [img, setImg] = useState([]);
+  
 
   useEffect(() => {
     fetch(`${url}/categories`)

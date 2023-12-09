@@ -1,13 +1,12 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import "../assets/css/ProductUpdate.scss";
 
 const ProductUpdate = () => {
   const mySelect = useRef();
   let { id_update } = useParams();
   const url = "https://casaloman-api.vercel.app";
-  const [product, setProduct] = useState([]);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [cate, setCate] = useState("");
@@ -16,7 +15,6 @@ const ProductUpdate = () => {
     fetch(`${url}/products/${id_update}`)
       .then((res) => res.json())
       .then((data) => {
-        setProduct(data);
         setName(data.name);
         setPrice(data.price);
         setCate(data.id_cate);

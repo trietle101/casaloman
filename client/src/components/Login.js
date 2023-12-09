@@ -1,9 +1,6 @@
 import React from "react";
 import "../assets/css/Login.scss";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { loginSuccess } from "../features/auth/authSlice";
 import { useFormik } from "formik";
 import { LoginSchema } from "../features/validations/UserSchema";
@@ -12,7 +9,6 @@ const url = "https://casaloman-api.vercel.app";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const onSubmit = async (values, actions) => {
     console.log(values);
     console.log(actions);

@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "../assets/css/Sidebar.scss";
-import { useSelector } from "react-redux";
 
 const Sidebar = (props) => {
   const [hide1, setHide1] = useState(false);

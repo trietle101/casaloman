@@ -1,18 +1,11 @@
 import React from "react";
 import "../assets/css/ChangePassword.scss";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { loginSuccess } from "../features/auth/authSlice";
+import { useParams } from "react-router-dom";
 import { useFormik } from "formik";
-import { LoginSchema } from "../features/validations/UserSchema";
 
 const url = "https://casaloman-api.vercel.app";
 
 const ChangePassword = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { id_change } = useParams();
 
   const onSubmit = async (values, actions) => {

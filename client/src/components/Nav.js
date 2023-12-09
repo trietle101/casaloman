@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "../assets/css/Nav.scss";
-import { useSelector } from "react-redux";
 
 const Nav = (props) => {
   const [isFixed, setIsFixed] = useState("");
@@ -31,7 +30,7 @@ const Nav = (props) => {
       </div>
       <div className={`nav ${isFixed}`}>
         <div className="nav--left">
-          <a href="#">
+          <a href="#/">
             <i className="bx bx-menu bx-sm" onClick={props.setOpenedNav}></i>
           </a>
         </div>

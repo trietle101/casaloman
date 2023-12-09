@@ -41,7 +41,7 @@ const Details = () => {
             <div className="product details-product--info">
               <div className="info__name">
                 <div className="name-cate">
-                  <a href="#">{cate.name.toUpperCase()}</a>
+                  <a href="#/">{cate.name.toUpperCase()}</a>
                 </div>
                 <div className="name-name">
                   <h3>{products.name}</h3>

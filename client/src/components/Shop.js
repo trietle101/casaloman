@@ -1,6 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Products from "./Products";
 import { useState } from "react";
 import "../assets/css/Shop.scss";
