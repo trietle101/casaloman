@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/Banner.scss";
 
 const Banner = () => {
   return (
-    <div className="banner">
+    <div className="banner" data-aos="fade-up">
       <div className="banner-center">
         <img
           src="https://casaloman.com/wp-content/uploads/2023/04/1.png"
           alt="collection"
         ></img>
-        <div className="banner-button">
-          <a href="/#" className="btn-effect">
+        <div className="banner-button ">
+          <Link to="/#" className="btn-effect pointer">
             SEE LOOKBOOK
-          </a>
-          <a href="/products" className="btn-effect">
+          </Link>
+          <Link to="/products" className="btn-effect pointer">
             GO TO STORE
-          </a>
+          </Link>
         </div>
       </div>
     </div>

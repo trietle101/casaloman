@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../assets/css/Nav.scss";
 
@@ -29,18 +30,18 @@ const Nav = (props) => {
         <span>FREESHIPPING IN VIETNAM. WORLDWIDE SHIPPING FIXED RATES.</span>
       </div>
       <div className={`nav ${isFixed}`}>
-        <div className="nav--left">
-          <a href="#/">
+        <div className="nav--left pointer">
+          <div>
             <i className="bx bx-menu bx-sm" onClick={props.setOpenedNav}></i>
-          </a>
+          </div>
         </div>
-        <div className="nav--center">
-          <a href="/#">
+        <div className="nav--center pointer">
+          <Link to="/">
             <img
               src="https://casaloman.com/wp-content/uploads/2022/05/1-copy.png"
               alt="logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="nav--right">
           {isAuthenticated ? (
@@ -48,14 +49,14 @@ const Nav = (props) => {
               <span>{userName}</span>
             </a>
           ) : (
-            <a href="/account">
+            <Link to="/account" className="pointer">
               <i className="bx bx-user bx-sm"></i>
-            </a>
+            </Link>
           )}
-          <a href="/#" className="cart">
+          <Link to="/" className="cart pointer">
             <i className="bx bx-shopping-bag bx-sm"></i>
             <span>0</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

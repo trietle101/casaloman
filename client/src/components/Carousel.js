@@ -141,7 +141,7 @@ const Carousel = () => {
     setIsHovering(false);
   };
   return (
-    <div className="carousel">
+    <div className="carousel" data-aos="fade-up">
       <div className="carousel-container">
         <ImageGallery
           onMouseOver={handleMouseOver}

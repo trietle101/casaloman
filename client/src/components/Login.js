@@ -1,9 +1,9 @@
 import React from "react";
 import "../assets/css/Login.scss";
 import { useDispatch } from "react-redux";
-import { loginSuccess } from "../features/auth/authSlice";
+import { loginSuccess } from "../redux/features/auth/authSlice";
 import { useFormik } from "formik";
-import { LoginSchema } from "../features/validations/UserSchema";
+import { LoginSchema } from "../redux/features/validations/UserSchema";
 
 const url = "https://casaloman-api.vercel.app";
 
@@ -21,6 +21,7 @@ const Login = () => {
 
     fetch(`${url}/users/login`, {
       method: "POST",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json"
       },
@@ -43,7 +44,7 @@ const Login = () => {
         window.location.replace("/");
       })
       .catch((error, req) => {
-        console.error("Error making POST request:", error, req.body);
+        console.error("Error making POST request:", error);
       });
     actions.resetForm();
   };

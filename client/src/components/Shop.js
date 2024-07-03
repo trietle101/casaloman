@@ -15,22 +15,21 @@ const Shop = (props) => {
     <div className="shop">
       <div className="shop-container">
         <div className="shop-heading">
-          <div shop-heading--left>
+          <div className="shop-heading--left">
             <div>
               <h3>THE PARADISE OF SINS COLLECTION</h3>
             </div>
           </div>
-          <div shop-heading--right>
+          <div className="shop-heading--right">
             <select
               name="orderby"
-              class="orderby"
+              className="orderby"
               aria-label="Shop order"
+              value={opt}
               onChange={handleSort}
             >
               <option value="popularity">Sort by popularity</option>
-              <option value="date" selected="selected">
-                Sort by latest
-              </option>
+              <option value="latest">Sort by latest</option>
               <option value="price-asc">Sort by price: low to high</option>
               <option value="price-desc">
                 Sort by price: high to low

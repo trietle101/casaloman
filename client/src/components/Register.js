@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/Register.scss";
 import { useFormik } from "formik";
-import { UserSchema } from "../features/validations/UserSchema";
+import { UserSchema } from "../redux/features/validations/UserSchema";
 
 const url = "https://casaloman-api.vercel.app";
 

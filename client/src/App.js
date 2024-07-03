@@ -1,6 +1,8 @@
 import "./App.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "./redux/actions/productsActionThunk";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -12,8 +14,12 @@ import ProductUpdate from "./components/ProductUpdate";
 import CategoryList from "./components/CategoryList";
 import CategoryUpdate from "./components/CategoryUpdate";
 import Account from "./components/Account";
-import { ProtectedRouter } from "./features/protected/ProtectedRouter";
+import { ProtectedRouter } from "./redux/features/protected/ProtectedRouter";
 import ChangePassword from "./components/ChangePassword";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 function App() {
   const [isOpened, setIsOpened] = useState(false);
@@ -21,6 +27,12 @@ function App() {
     setIsOpened(!isOpened);
     console.log(isOpened);
   }
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+  const productsData = useSelector((state) => state.products.products);
+  // console.log(productsData);
   return (
     <>
       <BrowserRouter basename="/">

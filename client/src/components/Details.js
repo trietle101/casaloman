@@ -12,6 +12,7 @@ const Details = () => {
   const [relproducts, setRelProducts] = useState({});
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [item, setItem] = useState({ size: "", amount: 1 });
 
   useEffect(() => {
     setLoading(true);
@@ -68,38 +69,56 @@ const Details = () => {
               <div className="price__size">
                 <p>SIZES</p>
                 <div className="size-list">
-                  <div>
+                  <div
+                    className={item.size === "S" ? "active" : ""}
+                    onClick={() => setItem((prev) => ({ ...prev, size: "S" }))}
+                  >
+                    <span>S</span>
+                  </div>
+                  <div
+                    className={item.size === "M" ? "active" : ""}
+                    onClick={() => setItem((prev) => ({ ...prev, size: "M" }))}
+                  >
                     <span>M</span>
                   </div>
-                  <div>
+                  <div
+                    className={item.size === "L" ? "active" : ""}
+                    onClick={() => setItem((prev) => ({ ...prev, size: "L" }))}
+                  >
                     <span>L</span>
                   </div>
-                  <div>
+                  <div
+                    className={item.size === "XL" ? "active" : ""}
+                    onClick={() => setItem((prev) => ({ ...prev, size: "XL" }))}
+                  >
                     <span>XL</span>
-                  </div>
-                  <div>
-                    <span>XXL</span>
                   </div>
                 </div>
               </div>
               <div className="price__cart">
                 <div className="cart-quantity">
-                  <button type="button" className="qty minus">
+                  <button
+                    type="button"
+                    className="qty minus"
+                    onClick={() => {
+                      if (item.amount > 1) {
+                        setItem((prev) => ({
+                          ...prev,
+                          amount: item.amount - 1
+                        }));
+                      }
+                    }}
+                  >
                     -
                   </button>
-                  <input
-                    type="number"
-                    className="input-text"
-                    step="1"
-                    min="1"
-                    max="7"
-                    name="quantity"
-                    value="1"
-                    size="4"
-                    placeholder=""
-                    inputmode="numeric"
-                  />
-                  <button type="button" className="qty plus">
+                  <div className="amount">{item.amount}</div>
+                  <button
+                    type="button"
+                    className="qty plus"
+                    onClick={() =>
+                      setItem((prev) => ({ ...prev, amount: item.amount + 1 }))
+                    }
+                  >
                     +
                   </button>
                 </div>
@@ -113,15 +132,15 @@ const Details = () => {
             <h3>RELATED PRODUCTS</h3>
             <Carousel
               centerMode
-              centerSlidePercentage={25}
-              width={1100}
+              centerSlidePercentage={23}
+              width={1240}
               showIndicators={false}
               showStatus={false}
               showThumbs={false}
-              visibleSlides={7}
               infinite={true}
               totalSlides={relproducts.length}
               infiniteLoop={true}
+              slidesToSlide={4}
             >
               {Object.keys(relproducts).length !== 0 &&
                 relproducts.map((product, i) => (

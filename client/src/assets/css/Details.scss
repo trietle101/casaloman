@@ -9,10 +9,12 @@
     width: 90%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 25% 40% 30%;
+    grid-template-columns: 25% 40% 25%;
     grid-column-gap: 60px;
     align-items: center;
     overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
     .product {
       overflow-y: auto;
       -ms-overflow-style: none; /* IE and Edge */
@@ -26,7 +28,7 @@
       display: flex;
       flex-direction: column;
       img {
-        max-height: 95vh;
+        max-height: 100%;
         margin-top: 20px;
       }
     }
@@ -78,6 +80,7 @@
         }
         .size-list {
           display: flex;
+          margin-left: 50px;
           div {
             border: 1px solid rgb(219, 219, 219);
             display: flex;
@@ -87,42 +90,48 @@
             width: 33px;
             border-radius: 5px;
             margin-right: 8px;
+            cursor: pointer;
             span {
               font-size: 14px;
             }
+          }
+          .active {
+            box-shadow: 0 0 0 0.1rem #d26e4b;
           }
         }
       }
       .price__cart {
         display: flex;
+        height: 30px;
         .cart-quantity {
+          display: flex;
           border: 1px solid rgb(219, 219, 219);
-          input {
-            max-width: 2.5em;
-            width: 2.5em;
-            height: 24px;
+          .amount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 100%;
             text-align: center;
             border-radius: 0 !important;
-            -webkit-appearance: textfield;
-            -moz-appearance: textfield;
-            appearance: textfield;
-            border: none;
+            font-size: 12px;
           }
-          input::-webkit-outer-spin-button,
-          input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
+
           button {
-            height: 30px;
-            width: 20px;
+            height: 100%;
+            width: 17px;
+            font-size: 12px;
             border-radius: 0px;
             background: none;
             color: inherit;
             padding: 0;
             outline: none;
             border: none;
-            background-color: rgb(242, 242, 242);
+            background-color: rgb(243, 243, 243);
+            transition: background-color 0.2s linear;
+            &:hover {
+              background-color: rgb(207, 207, 207);
+            }
           }
           .plus {
             border-left: 1px solid rgb(219, 219, 219);
@@ -136,6 +145,8 @@
           }
         }
         .cart-add {
+          height: 100%;
+          width: 100px;
           margin-left: 10px;
           background-color: black;
           color: white;
@@ -152,7 +163,7 @@
     margin-bottom: 40px;
     .products-card {
       width: 100%;
-      margin-right: 200px;
+      // margin-right: 200px;
       img {
         width: 100%;
       }
@@ -176,6 +187,9 @@
     .carousel-slider {
       height: 100%;
     }
+    // .slider {
+    //   transform: translate3d(0%, 0px, 0px) !important;
+    // }
     .slide {
       margin-right: 20px;
     }
